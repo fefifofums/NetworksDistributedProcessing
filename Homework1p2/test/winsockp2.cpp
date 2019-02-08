@@ -85,8 +85,7 @@ void winsock_test2(URL_parse *url, bool single, IPS *ips)//void)
 			auto end = get_time();
 			auto elapsed = elapsed_time(start, end);
 			char* ipa = inet_ntoa(server.sin_addr);
-			printf("done in %d ms, found ", elapsed);
-			printf("%s\n", inet_ntoa(server.sin_addr));
+			printf("done in %I64d ms, found %s\n", elapsed, inet_ntoa(server.sin_addr));
 
 			if (!single) {
 				printf("\tChecking IP uniqueness... ");
